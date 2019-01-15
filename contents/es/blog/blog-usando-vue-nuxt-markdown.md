@@ -25,7 +25,7 @@ Lo que más me atrae de Nuxt es la filosofía *serverless* (aunque Nuxt también
 
 ## ¿De dónde saco el contenido si no tengo servidor?
 
-Nuxt, al seguir la arquitectura [JAMStack](https://jamstack.org/) está construido para obtener contenido mediante APIs, por ello muchas personas utilizan headless CMSs como [Contentful](https://www.contentful.com/) o [Prismic](https://prismic.io/). Me parecían opciones interesantes en un principio pero me dí cuenta que no era necesario para una web como la mía ya que los CMSs están orientados para ser utilizados por personas sin conocimientos técnicos, además de ser caros, guardar los assets en sus propios servidores y no ser la mejor opción si quería tener la mejor performance.
+Nuxt, al seguir la arquitectura [JAMStack](https://jamstack.org/), está construido para obtener contenido mediante APIs, por ello muchas personas utilizan headless CMSs como [Contentful](https://www.contentful.com/) o [Prismic](https://prismic.io/). Me parecían opciones interesantes en un principio pero me di cuenta que no era necesario para una web como la mía ya que los CMSs están orientados para ser utilizados por personas sin conocimientos técnicos, además de ser caros, guardar los assets en sus propios servidores y no ser la mejor opción si quería tener la mejor performance.
 
 **Por ello, me decidí a utilizar un sistema de Markdowns que guardaría en Github y llamaría dinámicamente.**
 
@@ -54,7 +54,7 @@ async asyncData ({store}) {
 }
 ```
 
-La razón por la cual tengo los arrays de los nombres de los blogs importados desde fuera es porque quiero utilizarlo también para generar las páginas de forma estática a través del objeto [generate](https://nuxtjs.org/api/configuration-generate/) en la configuración de Nuxt, fichero <inline-code>nuxt.config.js</inline-code>.
+La razón por la cual tengo los arrays de los nombres de los blogs importados desde fuera es porque quiero utilizarlos también para generar las páginas de forma estática a través del objeto [generate](https://nuxtjs.org/api/configuration-generate/) en la configuración de Nuxt, fichero <inline-code>nuxt.config.js</inline-code>.
 
 ```javascript
 import blogsEn from '~/contents/en/blogsEn.js'
@@ -117,12 +117,12 @@ Gracias a la herramienta [Lighthouse](https://developers.google.com/web/fundamen
     :height="'509'"
     alt="performance" />
 
-Como veis Medium hace muchas cosas bien pero la performance no es una de ellas. Esto se traduce en experiencia de usuario como una carga muy lenta, sobre todo en dispositivos móviles. **Porque la performance es experiencia de usuario.** Ya hablaremos más de ello otro día.
+Como ves, Medium hace muchas cosas bien pero la performance no es una de ellas. Esto se traduce en experiencia de usuario como una carga muy lenta, sobre todo en dispositivos móviles. **Porque la performance es experiencia de usuario.** Ya hablaremos más de ello otro día.
 Lo interesante aquí es que con Nuxt he conseguido llegar a un **94%** de performance frente a un 40% que ofrece Medium en la primera carga, pero lo mejor es que al utilizar sistemas de caché, **la segunda vez que entres en mi web la performance es de 100%** mientras que Medium es del 60%.
 
 ## Web en dos idiomas
 
-Para traducir la web en inglés y español utilizo [nuxt-i18n](https://github.com/nuxt-community/nuxt-i18n). Es una capa por encima de [vue-i18n](https://github.com/kazupon/vue-i18n) el cual tiene lazy-loading de las traducciones. *Nuxt-i18n* automatiza cómo se trabajan las traducciones en el router de Vue, simplificándolo para Nuxt. Te lo recomiendo por el router, aunque el paquete en sí está un poco verde, la documentación no es la mejor y tiene algunas cosas que no he conseguido que funcionaran como la cookie de redirección en base al idioma del navegador. Pero es un problema que tienes que aceptar si utilizas un nuevo framework como es Nuxt.
+Para traducir la web en inglés y español utilizo [nuxt-i18n](https://github.com/nuxt-community/nuxt-i18n). Es una capa por encima de [vue-i18n](https://github.com/kazupon/vue-i18n) la cual tiene lazy-loading de las traducciones. *Nuxt-i18n* automatiza cómo se trabajan las traducciones en el router de Vue, simplificándolo para Nuxt. Te lo recomiendo por el router, aunque el paquete en sí está un poco verde, la documentación no es la mejor y tiene algunas cosas que no he conseguido que funcionaran como la cookie de redirección en base al idioma del navegador. Pero es un problema que tienes que aceptar si utilizas un nuevo framework como es Nuxt.
 
 ## Funcionalidades y mejoras que quiero añadir en el futuro
 
@@ -158,5 +158,5 @@ Para traducir la web en inglés y español utilizo [nuxt-i18n](https://github.co
 
 Aquí te dejo el código total de mi web pero ten en cuenta que es mi primer proyecto con Nuxt y Vue en solitario y que sé que tengo que limpiar bastante y darle un poco más de amor en la siguiente iteración. [Código de marinaaisa.com en Github](https://github.com/marinaaisa/marinaaisa-website-2018)
 
-Cómo no tengo comentarios en el blog, me encantaría continuar la conversación en [Twitter](https://twitter.com/MarinaAisa). ¡Todo feedback es bienvenido! Si crees que hay algo que se puede mejorar me ayudarías muchísimo.
+Como no tengo comentarios en el blog, me encantaría continuar la conversación en [Twitter](https://twitter.com/MarinaAisa). ¡Todo feedback es bienvenido! Si crees que hay algo que se puede mejorar me ayudarías muchísimo.
 ¡Feliz 2019!

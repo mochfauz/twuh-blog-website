@@ -1,11 +1,13 @@
 ---
 name: 'vuex-que-es-cuando-utilizarlo'
 title: Cómo funciona Vuex y cómo lo utilicé mal
-year: 12 Enero 2019
+year: 22 Enero 2019
 color: '#edece7'
+text-color: 'black'
+trans: 'vuex-what-is-when-use-it'
 id: 'vuex-what-when'
 description: |
-  Qué es Vuex, cómo empeoré la performance de mi web con ello y por qué
+  Conceptos básicos de Vuex, cómo empeoré la performance de mi web con ello y por qué
 ---
 ## Qué es Vuex
 
@@ -13,7 +15,7 @@ Abreviadamente, [Vuex](https://vuex.vuejs.org/) te permite centralizar informaci
 
 ## Qué problema resuelve
 
-Cuando trabajas con librerías como Vue o React, la información de los componentes se transporta de componente padre a componente hijo a través de "props" y viceversa a través de emitir un evento que escuchará el padre. Hay algunas veces que necesitas acceder a información de un componente desde otro sin que tengan la relación de padre e hijo. ¿Cómo la vas a obtener entonces? Técnicamente se puede hacer, pero además de ser una movida acabas con lógica de negocio repartida por cualquier componente que seguramente se repita y que en aplicaciones grandes puede ser un drama. Aquí es donde entra la centralización de esa información con herramientras como Vuex (en Vue) o Redux (en React). No solo puedes centralizar información sino también funciones. 
+Cuando trabajas con una librería como Vue, la información de los componentes se transporta de componente padre a componente hijo a través de "props" y viceversa a través de emitir un evento que escuchará el padre. Hay algunas veces que necesitas acceder a información de un componente desde otro sin que tengan la relación de padre e hijo. ¿Cómo la vas a obtener entonces? Técnicamente se puede hacer, pero además de ser una movida acabas con lógica de negocio repartida por cualquier componente que seguramente se repita y que en aplicaciones grandes puede ser un drama. Aquí es donde entra la centralización de esa información con herramientras como Vuex (en Vue) o Redux (en React). No solo puedes centralizar información sino también funciones. 
 
 ## La estructura para utilizar Vuex
 Vuex se distribuye de la siguiente manera:
@@ -25,7 +27,7 @@ Vuex se distribuye de la siguiente manera:
   - Son funciones.
   - Son las únicas funciones que pueden modificar el estado.
   - Son llamadas por las acciones.
-  - Se pueden inicializar en el componente a utilizar a través de commit pero deberían de inicializarse a través de una acción.
+  - Se pueden inicializar en el componente a utilizar a través de commit o inicializarse a través de una acción.
   - Son síncronas.
 - **Acciones** (en el código <inline-code>actions</inline-code>):
   - Son funciones.
@@ -42,7 +44,7 @@ Vuex se distribuye de la siguiente manera:
 
 ## Cómo y por qué yo lo utilicé mal
 
-**¡El hecho de que exista Vuex no quiere decir que todas las aplicaciones lo necesiten! Para nada.** Recordemos que Vuex tiene sentido si se reutiliza el código. No tiene sentido que hagas un getter si solo lo vas a utilizar una vez, para eso crea una propiedad computed en el mismo componente que lo necesita.
+**¡El hecho de que exista Vuex no quiere decir que todas las aplicaciones lo necesiten! Para nada.** Recordemos que Vuex tiene sentido si se reutiliza el código o si hay si hay componentes distantes que necesiten comunicarse. No tiene sentido que hagas un getter si solo lo vas a utilizar una vez y no se comunica con otro componente, para eso crea una propiedad computed en el mismo componente que lo necesita.
 
 Pero yo como era una novata, pensé que esta idea de centralización de información me vendría de lujo para crear esta web con blog que expliqué en este <nuxt-link to="blog-usando-vue-nuxt-markdown">post</nuxt-link>. En un primer paso pensé en importar todos los archivos markdown en mi webapp de una sola vez a través de una acción que comitearía una mutación para terminar guardando todos los posts en el estado. Así, después tendría acceso desde el estado a todos los posts o a uno solo, según necesitara en cada componente. Por ejemplo, en la página dinámica de cada post simplemente haría algo así y obtendría el post que busco:
 

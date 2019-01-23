@@ -6,14 +6,14 @@
       class="portfolio__thumb-inner"
     >
       <div class="portfolio__thumb-hover" :style="backgroundColor">
-        <h3 class="portfolio__thumb-description">
-          {{ work.title }}
-        </h3>
-        <h3 
-          class="portfolio__thumb-client"
-        >
-          {{ work.description }}
-        </h3>
+        <div class="portfolio__thumb-text">
+          <h3 class="portfolio__thumb-description">
+            {{ work.title }}
+          </h3>
+          <h3 class="portfolio__thumb-client">
+            {{ work.description }}
+          </h3>
+        </div>
       </div>
       <ImageResponsive
         :imageURL="cardImage"
@@ -28,14 +28,16 @@
       class="portfolio__thumb-inner"
     >
       <div class="portfolio__thumb-hover" :style="backgroundColor">
-        <h3 class="portfolio__thumb-description">
-          {{ work.title }}
-        </h3>
-        <h3 
-          class="portfolio__thumb-client"
-        >
-          {{ work.description }}
-        </h3>
+        <div class="portfolio__thumb-text">
+          <h3 class="portfolio__thumb-description" :class="{ 'portfolio__thumb-description--dark' : work.isTextColorDark }">
+            {{ work.title }}
+          </h3>
+          <h3 
+            class="portfolio__thumb-client" :class="{ 'portfolio__thumb-client--dark' : work.isTextColorDark }"
+          >
+            {{ work.description }}
+          </h3>
+        </div>
       </div>
       <ImageResponsive
         :imageURL="cardImage"
@@ -79,7 +81,7 @@
           'blog-slug';
       },
       backgroundColor () {
-        return `background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, ${this.work.color} 70%);`
+        return `background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, ${this.work.color} 70%)`
       }
     }
   }
@@ -135,7 +137,6 @@
     &__thumb-inner {
       position: relative;
       font-size: 0;
-      line-height: 0;
       display: block;
 
       &:hover {
@@ -159,10 +160,14 @@
       }
     }
 
-    &__thumb-description {
+    &__thumb-text {
       position: absolute;
-      bottom: 5.8rem;
+      bottom: 3rem;
       left: 4rem;
+      padding-right: 4rem;
+    }
+
+    &__thumb-description {
       line-height: initial;
       text-align: left;
       color: white;
@@ -172,9 +177,6 @@
       }
     }
     &__thumb-client {
-      position: absolute;
-      bottom: 3.5rem;
-      left: 4rem;
       text-align: left;
       color: white;
       font-weight: 200;

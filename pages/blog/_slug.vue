@@ -5,7 +5,7 @@
         <div class="elevate-cover__textOffset">
           <div class="elevate-cover__text">
             <span class="blogSelected-year">{{ year }}</span>
-            <span v-if="trans">—</span>
+            —
             <nuxt-link
               v-if="trans"
               v-for="(locale, i) in showLocales"
@@ -14,6 +14,7 @@
               
                 {{ $t('changeLanguagePost') }}
             </nuxt-link>
+            <span v-else>{{ $t('soonLanguagePost') }}</span>
             <h1 class="elevate-cover__title">
               {{ title }}
             </h1>

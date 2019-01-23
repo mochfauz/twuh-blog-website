@@ -1,7 +1,7 @@
 ---
 name: 'vuex-what-is-when-use-it'
 title: How Vuex works and how I used it wrong
-year: 22 January 2019
+year: 23 January 2019
 color: '#edece7'
 isTextColorDark: true
 trans: 'vuex-que-es-cuando-utilizarlo'
@@ -15,14 +15,14 @@ In short, [Vuex](https://vuex.vuejs.org/) allows you to centralize information a
 
 ## What problem does it solve?
 
-When you work with a library like Vue, the component information is transported from parent component to child component through "props" and vice versa through emiting an event that the parent component will hear. Sometimes you need to access information from one component to another which don't have the father-son relationship. How are you going to get them to comunicate then? Technically it can be done, but it can be very complicated ending up with business logic spread over the app which it's likely to repeat itself. This is where the centralization of that information comes in with tools such as Vuex (in Vue) or Redux (in React). You can not only centralize information but also functions.
+When you work with a library like Vue, the component information is transported from a parent component to a child component through "props" and vice versa through emiting an event that the parent component will hear. Sometimes you need to access information from one component to another which don't have the father-son relationship. How are you going to get them to comunicate then? Technically it can be done, but it can be very complicated ending up with business logic spread all over the app which it's likely to repeat itself. This is where the centralization of that information comes in with tools such as Vuex, in Vue, or Redux, in React. You can not only centralize information but also functions.
 
 ## Its structure
 Vuex is distributed as follows:
 
 - **State** (in the code <inline-code>state</inline-code>):
   - It's an object that can contain any type of information: strings, arrays or other objects.
-  - It's the information stored centrally throughout the app.
+  - It's information stored centrally throughout the app.
 - **Mutations** (in the code <inline-code>mutations</inline-code>):
   - They are functions.
   - They are the only functions that can modify the state.

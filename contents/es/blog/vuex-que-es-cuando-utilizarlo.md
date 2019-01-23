@@ -1,7 +1,7 @@
 ---
 name: 'vuex-que-es-cuando-utilizarlo'
 title: Cómo funciona Vuex y cómo lo utilicé mal
-year: 22 Enero 2019
+year: 23 Enero 2019
 color: '#edece7'
 isTextColorDark: true
 trans: 'vuex-what-is-when-use-it'

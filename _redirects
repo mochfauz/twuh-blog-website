@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://marinaaisa2018.netlify.com/* https://marinaaisa.com/:splat 301!

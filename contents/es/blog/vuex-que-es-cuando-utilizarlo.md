@@ -46,7 +46,7 @@ Vuex se distribuye de la siguiente manera:
 
 **¡El hecho de que exista Vuex no quiere decir que todas las aplicaciones lo necesiten! Para nada.** Recordemos que Vuex tiene sentido si se reutiliza el código o si hay si hay componentes distantes que necesiten comunicarse. No tiene sentido que hagas un getter si solo lo vas a utilizar una vez y no se comunica con otro componente, para eso crea una propiedad computed en el mismo componente que lo necesita.
 
-Pero yo como era una novata, pensé que esta idea de centralización de información me vendría de lujo para crear esta web con blog que expliqué en este <nuxt-link to="blog-usando-vue-nuxt-markdown">post</nuxt-link>. En un primer paso pensé en importar todos los archivos markdown en mi webapp de una sola vez a través de una acción que comitearía una mutación para terminar guardando todos los posts en el estado. Así, después tendría acceso desde el estado a todos los posts o a uno solo, según necesitara en cada componente. Por ejemplo, en la página dinámica de cada post simplemente haría algo así y obtendría el post que busco:
+Pero yo como era una novata, pensé que esta idea de centralización de información me vendría de lujo para crear esta web con blog que expliqué en este <nuxt-link to="/es/blog/blog-usando-vue-nuxt-markdown">post</nuxt-link>. En un primer paso pensé en importar todos los archivos markdown en mi webapp de una sola vez a través de una acción que comitearía una mutación para terminar guardando todos los posts en el estado. Así, después tendría acceso desde el estado a todos los posts o a uno solo, según necesitara en cada componente. Por ejemplo, en la página dinámica de cada post simplemente haría algo así y obtendría el post que busco:
 
 ```javascript
 data () {
@@ -72,6 +72,6 @@ Había planteado una importación de todos los markdown en Vuex donde los guarda
 
 Este error, como tantos que me he ido encontrando en este proyecto sola, me sirvió para aprender bastante de Vuex y de cuando utilizarlo y cuando no, con eso me quedo.
 
-Por suerte me dí cuenta de mi error antes de publicar la web y pude cambiar el sistema de importación. Escribí un post sobre cómo hice esta importación dinámica <nuxt-link to="blog-usando-vue-nuxt-markdown"> aquí</nuxt-link>.
+Por suerte me dí cuenta de mi error antes de publicar la web y pude cambiar el sistema de importación. Escribí un post sobre cómo hice esta importación dinámica <nuxt-link to="/es/blog/blog-usando-vue-nuxt-markdown"> aquí</nuxt-link>.
 
 Como no tengo comentarios en el blog, me encantaría continuar la conversación en [Twitter](https://twitter.com/MarinaAisa). ¡Todo feedback es bienvenido! Si crees que hay algo que se puede mejorar me ayudarías muchísimo.

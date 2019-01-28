@@ -6,7 +6,7 @@
 </template>
 <style lang="scss">
 .nav-item {
-  @media (max-width: $screen-xs){
+  @media (max-width: $screen-sm) {
     margin-bottom: 2rem;
 
     a {

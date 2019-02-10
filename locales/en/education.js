@@ -5,7 +5,7 @@ export default {
     name: 'From each job, class, co-worker, book, article, meet-up or life experience',
     position: 'Self-learner',
     description: 'This is how I learnt the 80% of what I know now and how I improve it.',
-    learnt: "#VueJS #Nuxt",
+    learnt: "#VueJS #Performance #DesignSystems",
     place: 'Everywhere',
     finishTime: 'Always'
   },

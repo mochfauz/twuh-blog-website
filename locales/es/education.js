@@ -5,7 +5,7 @@ export default {
     name: 'De cada trabajo, curso, compañero/a, libro, artículo, meetup o experiencia',
     position: 'Autodidacta',
     description: 'Así es cómo he aprendido el 80% de lo que sé hoy en día.',
-    learnt: "#VueJS #Nuxt",
+    learnt: "#VueJS #Performance #DesignSystems",
     place: 'En cualquier sitio',
     finishTime: 'Siempre'
   },

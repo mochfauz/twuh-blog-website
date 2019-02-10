@@ -5,8 +5,8 @@ export default {
     name: 'Holaluz',
     url: 'https://www.holaluz.com/',
     position: 'UX Engineer',
-    description: 'Mix of UX/UI Designer and Front-End Developer at Holaluz, a 100% renewable and online power company in Spain.',
-    learnt: "#ProductDesign #Front-endDevelopment",
+    description: 'Mix of UX/UI Designer and Front-End Developer at Holaluz, a 100% renewable and online energy company in Spain.',
+    learnt: "#BuildingEndToEndDesignSystems #VueJS #Accessibility",
     place: 'Barcelona, ESP',
     startingTime: 'Oct’17',
     finishTime: 'today'

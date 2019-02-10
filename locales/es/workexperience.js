@@ -6,7 +6,7 @@ export default {
     url: 'https://www.holaluz.com/',
     position: 'Ingeniera UX',
     description: 'Mezcla de diseñadora UX/UX y desarrolladora Front-End en Holaluz, la compañía electrica líder en energía renovable en España.',
-    learnt: "#ProductDesign #Front-endDevelopment",
+    learnt: "#ConstruirDesignSystemsCompletos #VueJS #Accesibilidad",
     place: 'Barcelona, ESP',
     startingTime: 'Oct’17',
     finishTime: 'hasta hoy'

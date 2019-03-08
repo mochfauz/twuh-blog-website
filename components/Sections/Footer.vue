@@ -3,6 +3,7 @@
     <div class="footer__main">
       <div class="container">
         <div class="footer__contact" v-html="$t('footer.content')"/>
+        
       </div>
     </div>
     <div class="footer__info">

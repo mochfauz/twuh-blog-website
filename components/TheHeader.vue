@@ -5,11 +5,11 @@
   >
     <div class="container">
       <nuxt-link :to="localePath('index')" class="the-header__link-logo">
-        <img src="~/assets/images/logo-marina.svg" alt="Logo Marina" class="the-header__logo">
+        <img width="100" src="~/assets/images/logo-green.png" alt="Logo Marina" class="the-header__logo">
       </nuxt-link>
       <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
       <div class="navigation-items">
-        <LangSwitcher v-if="altRoutes"/>
+        
         <NavItems/>
       </div>
     </div>

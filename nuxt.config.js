@@ -8,7 +8,7 @@ const productionUrl = {
   en: "/en",
   es: "/es"
 };
-const baseUrl = 'https://marinaaisa.com';
+const baseUrl = 'https://blog.twuh.me';
 
 const works = [
   "vr-player"
@@ -21,7 +21,7 @@ module.exports = {
     works
   },
   head: {
-    title: 'Marina Aisa | Product Designer & Front-end Developer',
+    title: 'Freedom for everyone | Twuh Blog',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' },

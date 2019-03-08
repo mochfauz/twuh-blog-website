@@ -1,12 +1,7 @@
 <template>
   <section class="hero" id="hero">
     <div class="hero__content">
-      <ImageResponsive
-        :imageURL="'marina-aisa-photo.jpg'"
-        :classes="'hero__profile'"
-        :width="'224'"
-        :height="'77'"
-        :alt="'Imagen de Marina'" />
+      
       <div class="hero__text">
         <h1 id="hero-text">
           <span id="hero-text-content"></span>
@@ -39,10 +34,8 @@ export default {
 
     theater.addActor('hero-text-content', { speed: .9, accuracy: 1 })
     if (this.$i18n.locale == 'en') {
-      theater.addScene('hero-text-content: Hi! I\'m <a target="_blank" href="https://twitter.com/MarinaAisa">Marina Aísa</a>', 600, ', <br> a product designer.', 600, function (done) { document.getElementById("hero-text").style.background = 'black'; done(); }, -17, 'front-end developer.', 600,function (done) { document.getElementById("hero-text").style.background = 'white'; done(); })
-    } else {
-      theater.addScene('hero-text-content: Hola, soy <a target="_blank" href="https://twitter.com/MarinaAisa">Marina Aísa</a>', 600, ', <br> diseñadora de producto.', 600, function (done) { document.getElementById("hero-text").style.background = 'black'; done(); }, -23, 'front-end developer.', 600,function (done) { document.getElementById("hero-text").style.background = 'white'; done(); })
-    }
+      theater.addScene('hero-text-content: Hi! I\'m <a target="_blank" href="https://twuh.me">Twuh</a>', 600, ', <br> a machine to help you get financial freedom.')
+    } 
     theater.addScene(theater.replay.bind(theater))
   }
 }
@@ -51,11 +44,13 @@ export default {
 .hero {
   width: 100%;
   background: $secondary-light;
+  background-image: url(https://twuh.me/img/bg/market.jpg);
+    background-size: cover;
   text-align: center;
   position: relative;
   
   @media (min-width: $screen-md){
-    height: 488px;
+    height: 420px;
   }
 
   .hero__content {

@@ -3,16 +3,10 @@
     <HeroSection />
     <div class="container">
       <BlogSection :blogs="blogs"/>
-      <PortfolioSection/>
-      <AboutSection />
-      <ExperienceSection />
+
     </div>
-      <CallToActionSection />
-    <div class="container">
-      <lazy-component>
-        <MapSection/>
-      </lazy-component>
-    </div>
+ 
+    
   </div>
 </template>
 
@@ -55,7 +49,7 @@
           lang: this.$i18n.locale,
         },
         meta: [
-          { name: "author", content: "Marina Aisa" },
+          { name: "author", content: "Moch Fauz" },
           { name: "description", property: "og:description", content: this.$t('indexPageHead.description'), hid: "description" },
           { property: "og:title", content: this.$t('indexPageHead.title') },
           { property: "og:image", content: this.ogImage },
